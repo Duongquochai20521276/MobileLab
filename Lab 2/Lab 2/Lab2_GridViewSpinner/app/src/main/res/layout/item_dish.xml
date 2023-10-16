@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dish_image"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginVertical="3dp"
+        android:scaleY="1" />
+
+    <LinearLayout
+        android:id="@+id/item_footer"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="1dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:baselineAligned="true">
+
+        <TextView
+            android:id="@+id/item_dish_position"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="#fff"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"/>
+
+        <ImageView
+            android:id="@+id/star_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/star"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+</FrameLayout>

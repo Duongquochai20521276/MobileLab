@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/title" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản lý nhân viên"
+            android:textColor="@color/white"
+            android:textSize="3mm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ma_NV"
+        android:text="Mã NV:"
+        android:textColor="#635E5E"
+        android:textSize="6pt"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/et_ma_nv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/Ma_NV"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ten_NV"
+        android:text="Tên NV:"
+        android:textColor="#635E5E"
+        android:textSize="6pt"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/Ma_NV"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/et_ten_nv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/Ten_NV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Loai_NV"
+        android:text="Loại NV:"
+        android:textColor="#635E5E"
+        android:textSize="6pt"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/Ten_NV"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_loai_NV"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toEndOf="@+id/Loai_NV"
+        app:layout_constraintTop_toBottomOf="@id/et_ten_nv">
+        
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_Chinh_Thuc"
+            android:text="Chính thức"
+            android:layout_marginLeft="30dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_Thoi_Vu"
+            android:text="Thời vụ"
+            android:layout_marginLeft="30dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10mm"
+        android:text="Nhập NV"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/rg_loai_NV"
+        app:layout_constraintStart_toStartOf="@+id/rg_loai_NV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/space"
+        android:background="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/btn_Add"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_employees"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

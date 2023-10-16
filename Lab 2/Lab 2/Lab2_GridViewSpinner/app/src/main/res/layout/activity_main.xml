@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Name"
+        android:text="Name:"
+        android:layout_marginTop="2.5mm"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18mm"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Thumbnail"
+        android:text="Thumbnail:"
+        android:layout_marginTop="5mm"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Name" />
+
+    <Spinner
+        android:id="@+id/sn_Thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:minHeight="48dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintLeft_toRightOf="@id/tv_Thumbnail"
+        app:layout_constraintTop_toBottomOf="@id/et_Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Promotion"
+        android:text="Promotion"
+        android:layout_marginTop="5mm"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Thumbnail"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_Yes"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_Promotion"
+        app:layout_constraintLeft_toRightOf="@id/tv_Promotion" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Add"
+        android:text="Add a new dish"
+        android:layout_marginLeft="2mm"
+        android:layout_marginRight="2mm"
+        android:layout_marginTop="2mm"
+        app:layout_constraintTop_toBottomOf="@id/cb_Yes"/>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="58mm"
+        android:id="@+id/gv_Dishes"
+        android:numColumns="2"
+        android:layout_marginTop="3mm"
+        app:layout_constraintTop_toBottomOf="@id/btn_Add"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
